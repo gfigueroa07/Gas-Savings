@@ -7,6 +7,7 @@ import random
 
 def get_pa_gas_price_alternative():
     # steal from multiple places because webscarping haters be hatin and we want to scrape da web frl <3
+    # list of  sources to try scraping
     sources = [
         {
             "name": "US Energy Information Administration (EIA)",
@@ -21,6 +22,7 @@ def get_pa_gas_price_alternative():
         {"name": "Mock Data (Fallback)", "url": None, "type": "mock"},
     ]
 
+    # HTTP Headers that mimic a browser
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "application/json, text/plain, */*",
@@ -28,7 +30,8 @@ def get_pa_gas_price_alternative():
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
     }
-
+    
+    # loop through each source 
     for source in sources:
         print(f"Trying {source['name']}...")
 
