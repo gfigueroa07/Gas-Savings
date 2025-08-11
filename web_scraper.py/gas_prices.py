@@ -38,6 +38,8 @@ def get_pa_gas_price_alternative():
         if source["type"] == "mock":
             # mock info for when the hating virgins be hating on a white boy trynna get some motion
             print("Using mock data as fallback...")
+            # Fake data for real data
+            # bypass authentication
             mock_prices = {
                 "regular": round(3.20 + random.uniform(-0.3, 0.3), 2),
                 "mid": round(3.45 + random.uniform(-0.3, 0.3), 2),
